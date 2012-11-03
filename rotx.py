@@ -35,14 +35,17 @@ def _rot_letter_offset(ordinal, n, offset, max):
         return ordinal
 
 
-def _rot_letter(ordinal, n, alphabetical_only):
-    """Rotates a single ordinal semi-intelligently, based on it's type
+def _rot_letter(input, n, alphabetical_only):
+    """Rotates a single character semi-intelligently, based on it's type
 
-    :param ordinal: The original value to rotate
+    :param input: The original value to rotate
     :param n: The amount to rotate by
     :param alphabetical_only: Whether to rotate in the full space of possible values, or just rotate a-Z (like a caesar cipher)
     """
-    assert isinstance(ordinal, int) or isinstance(ordinal, long)
+    assert isinstance(input, str) or isinstance(input, unicode), "Can only handle str and unicode"
+    assert len(input) == 1, "Input string must be exactly one character long"
+
+    ordinal = ord(input)
 
     if alphabetical_only:
         result_ord = _rot_letter_offset(ordinal, n, 97, 122)  # Lower-case
@@ -67,4 +70,4 @@ def rot(input, n, alphabetical_only=True):
     """
     _type = type(input)
     _chr = _type_chr(_type)
-    return _type().join(_chr(_rot_letter(ord(i), n, alphabetical_only)) for i in input)
+    return _type().join(_chr(_rot_letter(i, n, alphabetical_only)) for i in input)

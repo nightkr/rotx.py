@@ -50,8 +50,8 @@ def test_rot_letter(letter_pair, n):
     input, (expected_alpha_only, expected_all) = letter_pair
 
     _chr = rotx._type_chr(type(input))
-    assert _chr(rotx._rot_letter(ord(input), n, alphabetical_only=True)) == expected_alpha_only
-    assert _chr(rotx._rot_letter(ord(input), n, alphabetical_only=False)) == expected_all
+    assert _chr(rotx._rot_letter(input, n, alphabetical_only=True)) == expected_alpha_only
+    assert _chr(rotx._rot_letter(input, n, alphabetical_only=False)) == expected_all
 
 
 def test_rot(n):
