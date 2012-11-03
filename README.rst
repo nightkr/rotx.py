@@ -1,4 +1,4 @@
-A Python implementation of the very secure and useful[#insecure]_ rotX (also known as caesar ciphers) family of encryption algorithms.
+A Python implementation of the very secure and useful [#insecure]_ rotX (also known as caesar ciphers) family of encryption algorithms.
 
 Usage
 =====
