@@ -1,2 +1,8 @@
 __pycache__
 *.pyc
+*.egg
+htmlcov
+*.egg-info
+rotx-env
+.coverage
+.tox
