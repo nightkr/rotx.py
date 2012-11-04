@@ -13,10 +13,16 @@ There is also a CLI provided, run ``rotx -h`` for more documentation.
 
 Testing
 =======
+
 Testing is done using tox and Pythonbrew, run the following assuming both of these have been installed to run the tests::
 
     $ pythonbrew install 2.7.3
     $ pythonbrew install 2.6.6
     $ tox
+
+Why?
+====
+
+Because I was bored, and wanted an excuse to learn more about debian packaging.
 
 .. [#insecure] Disclaimer: The rotX algorithms are neither actually secure nor useful.
