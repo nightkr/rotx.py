@@ -6,3 +6,4 @@ htmlcov
 rotx-env
 .coverage
 .tox
+build
