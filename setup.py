@@ -16,6 +16,7 @@ class PyTest(TestCommand):
 
 setup(
     name='rotx',
+    version='0.0.1',
     license='MIT',
     py_modules=[
         'rotx',
