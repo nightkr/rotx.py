@@ -17,6 +17,19 @@ class PyTest(TestCommand):
 setup(
     name='rotx',
     license='MIT',
+    py_modules=[
+        'rotx',
+    ],
+    install_requires=[
+        'docopt>=0.5.0',
+        'schema>=0.1.1',
+    ],
+    entry_points={
+        'console_scripts': [
+            'rot = rotx:_main',
+            'rotx = rotx:_main',
+        ],
+    },
     tests_require=[
         'pytest>=2.3.2',
     ],
