@@ -19,7 +19,8 @@ try:  # Detect whether the Python build uses UCS-4 or UCS-2, used to determine w
     unichr(0x10FFFF)
     _py_ucs4 = True
 except ValueError:
-    _py_ucs4 = False
+    raise Exception("UCS-4 build of Python expected, UCS-2 build used")
+    #_py_ucs4 = False
 
 
 def _get_max_ord(type):
